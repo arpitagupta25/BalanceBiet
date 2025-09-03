@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Body Mass Index</title>
+    <link rel="stylesheet" type="text/css" href="dietmeal.css">
+    <style>
+        #heading {
+            text-align: center;
+            text-transform: uppercase;
+            color: black;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .bmi_container{
+            margin-left:3%;
+            margin-right:3%;
+        }
+        .bmi_info_container1{
+            align-items: center;
+            width:40%;
+            margin-left:1%;
+            margin-top:5px;
+            padding:3%;
+            padding-top: 2%;
+            border:2px solid #af5757;
+            float:left;
+        }
+        .bmi_info_container2{
+            align-items: center;
+            width:40%;
+            margin-top:5px;
+            padding:3%;
+            padding-top: 2%;
+            float:right;
+            border:2px solid #af5757;
+        }
+        .bmi_calci {
+            align-items: center;
+            width:50%;
+            margin: 2%;
+            margin-left: 20%;
+            border-radius: 2%;
+            background-color: #F4D793;
+            color: black;
+            padding: 2%;
+            padding-left: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .bmi_info1{
+            color:black; 
+            font-size:100%;
+            font-family: Comic Sans MS;
+        }
+        .li_bmi_info{
+            color:black; 
+            font-size:100%;
+            font-family: Comic Sans MS;
+        
+        }
+        .form_headers {
+            font-size: 120%;
+            font-weight: 400;
+            font-family: "Franklin Gothic Book", sans-serif;
+            text-transform: uppercase;
+        }
+        #bmi_img {
+            max-height: 300px;
+            margin-left: 0.5rem;
+        }
+        input[type="number"] {
+            width: 80px;
+            padding: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 2px 40px;
+            background-color: Crimson;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-radius: 5px;
+            font-size: 90%;
+            color: white;
+            cursor: pointer;
+        }
+        .bmi_table{
+            border:1px solid black;
+            border-collapse: collapse;
+            width:80%;
+            padding:5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <!-- Duplicate for seamless effect -->
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <img src="logobb.png" style="max-width: 10%;">
+            <a href="homepage.html">Home</a>
+            <div class="dropdown" tabindex="0">
+                <a href="meal.html">Meals </a>
+            <div class="dropdown-content">
+                <a href="meal.html">Vegetarian</a>
+                <a href="meal.html#nonveg">Non Vegetarian</a>
+            </div>
+            </div>
+            <div class="dropdown" tabindex="0">
+                <a href="#">Calculator</a>
+                <div class="dropdown-content">
+                    <a href="bmi_cal.html">BMI Calculator</a>
+                    <a href="calorie_cal.html">Calorie Calculator</a>
+                    <!-- <a href="fiction.html#horror">Dinner</a> -->
+                </div>
+            </div>
+            <a href="funfact.html">Fun Facts</a>
+            <a href="#">Contact</a>
+            <!-- <img id="insta" src="food1.png" style="max-width:7%;"> -->
+            
+        </div>
+    </header>
+    
+    <main>
+        <h1 id="heading">Body Mass Index</h1>
+        <br>
+    <div class="bmi_container">
+        <div class="bmi_info_container1">
+            <p class="bmi_info1">
+                🧠 What is BMI?<br>
+                    Body Mass Index (BMI) is a simple calculation that uses your height and weight to estimate how much body fat you have. It helps classify whether you’re underweight, at a healthy weight, overweight, or obese.
+            </p>  
+            <br>
+            <br>
+            <p class="bmi_info1">
+                🧮 How is BMI Calculated?<br>
+                The BMI formula is:<br>
+                <ul>
+                    <li class="li_bmi_info">
+                        Metric system:<br>
+                        BMI = weight (kg) ÷ [height (m)]²
+                    </li>
+                </ul>
+            </p>    
+            <br>
+            <br>
+            <p class="bmi_info1">
+                🧑‍⚕️ Why is BMI Important?<br>
+                Maintaining a healthy BMI can contribute to long-term wellness.
+                BMI helps identify individuals at risk for health conditions such as:
+                <ul>
+                    <li class="li_bmi_info">Heart disease</li>
+                    <li class="li_bmi_info">Type 2 diabetes</li>
+                    <li class="li_bmi_info">High blood pressure</li>
+                    <li class="li_bmi_info">Certain cancers</li>
+                </ul>
+            </p> 
+            <br>
+            <br>
+            <br> 
+            <br>
+        </div>
+        <div class="bmi_info_container2">
+            <table class="bmi_table">
+                <tr>
+                    <th colspan="2" align="center">📊 BMI Categories</th>
+                </tr>
+                <tr>
+                    <th class="bmi_table">BMI Range</th>
+                    <th class="bmi_table">Classification</th>
+                </tr>
+                <tr>
+                    <td class="bmi_table">Below 18.5</td>
+                    <td class="bmi_table">Underweight</td>
+                </tr>
+                <tr>
+                    <td class="bmi_table">18.5-24.9</td>
+                    <td class="bmi_table">Normal weight</td>
+                </tr>
+                <tr>
+                    <td class="bmi_table">25.0-29.9</td>
+                    <td class="bmi_table">Overweight</td>
+                </tr>
+                <tr>
+                    <td class="bmi_table">30.0 and above</td>
+                    <td class="bmi_table">Obesity</td>
+                </tr>
+            </table>
+            <br>
+            &emsp; &emsp;<img src="https://assets.nhs.uk/nhsuk-cms/images/MS_0118_healthy-weight-chart.width-1534.jpg" alt="bmi_chart" height="410px" width="460px">    	
+        </div>
+        
+    </div>
+
+    <div style="clear:both;">
+
+    </div>
+    <div class="bmi_calci">
+            <form onsubmit="bmi_calculation(event)">
+                    Gender:
+                    <input type="radio" name="male" value="Male">Male
+                    <input type="radio" name="female" value="Female">Female
+                    <br><br>
+                    Age:
+                    <input type="number" name="age" min="2" max="120" placeholder="Years">
+                    <br><br>
+                    Height:
+                    <input type="number" placeholder="Ft" id="feet">
+                    <input type="number" placeholder="In" id="inch">
+                    <br><br>
+                    Weight:
+                    <input type="number" placeholder="in Kgs" id="weight">
+                    <center>
+                        <button><p class="form_headers">Calculate</p></button>
+                    </center>
+                    <br>
+                    <p id="result_bmi"></p>
+            </form>
+        <img id="bmi_img" src="bmi_img2.png" alt="bmi_index">
+    </div>
+    <script>
+        function bmi_calculation(event) {
+            event.preventDefault(); // Prevent form submission
+            let weight=document.getElementById("weight").value;
+            let wt=parseFloat(weight); 
+
+            let height_feet = document.getElementById("feet").value;
+            let h_f=parseFloat(height_feet);
+
+            let height_inch = document.getElementById("inch").value;
+            let h_i=parseFloat(height_inch);
+
+            if (isNaN(wt) || isNaN(h_f) || isNaN(h_i)) {  //if Not a Number
+                document.getElementById("result_bmi").textContent = "Please enter valid weight and height.";
+                return;
+            }
+
+            let h_f_cm=h_f*30.48; // feet to cm
+            let h_i_cm=h_i*2.54;  // inches to cm
+            let ht=h_f_cm+h_i_cm;
+            let ht_meter= ht/100; // cm to m
+
+            let bmi= wt/(ht_meter * ht_meter);
+            let bmi_final=bmi.toFixed(2);
+
+            document.getElementById("result_bmi").textContent = "Your Body Mass Index is: " + bmi_final;
+        }
+    </script>
+    </main>
+    
+    <footer>
+        <div class="divfooter" >
+  
+            <div class="footer-content">
+                <p><strong>Balance Bite</strong> is your all-in-one diet planning companion, designed to make healthy eating simple, personalized, and stress-free. Whether you're chasing fitness goals or just trying to feel better every day, we've got your back with smart meal suggestions, easy tracking, and balanced nutrition tailored just for you. 🌱💚</p>
+                <br><p>© 2025 Balance Biete – Eat well. Live well. Stay balanced.</p>
+            </div>
+            <table align="right">
+                <tr>
+                    <td><b>Brand Story</b></td>
+                    <td><a class="a1" href="login.html"><b>Login</b></a></th>
+                    <td><b>Policies</b></td>
+                </tr>
+                <tr>
+                    <td><a class="a1" href="about_us.html">About us</a></td>
+                    <td><a class="a1" href="meal.html">Meals </a></td>
+                    <td>Privacy Policy</td>
+                </tr>
+                <tr>
+                    <td><a class="a1" href="#">Contact</a></td>
+                    <td>Track Your Diet</td>
+                    <td>T&C</td>
+                </tr>
+                <tr>
+                    <td>Blogs</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+            </table>
+            <br>
+        </div>
+      
+    </footer>        
+            
+    </body>
+    </html>
+
+
+
+

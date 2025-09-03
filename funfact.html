@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun Facts – Nourish</title>
+  <!-- <link rel="stylesheet" type="text/css" href="dietmeal.css"> -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    /* header{
+      position: fixed;
+    } */
+    .marquee-container {
+      position: fixed;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      height: 30px;
+      background-color: #F4D793;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    
+    .marquee-content {
+      display: flex; 
+      gap: 100px; /* Adjust gap between text */
+      animation: marqueeAnimation 20s linear infinite;
+      /* text-transform: uppercase; */
+    }
+    
+    .marquee-content span {
+      font-size: 24px;
+      color: black;
+    }
+    
+    @keyframes marqueeAnimation {
+      from {
+          transform: translateX(0);
+      }
+      to {
+          transform: translateX(-50%);
+      }
+    }
+    body{
+      background-color: #FFF6DA;
+      color: #000;
+      font-size: 20px ;
+    }
+    .navbar {
+      background-color: #af5757;
+      display: flex;
+      position: fixed;
+      width: 100%;
+      top:30px;
+      justify-content:flex-start;
+      gap:40px;
+      align-items: center;
+      /* margin-top: 30px; */
+      height: 100px;
+      /* font-family:monospace; */
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      padding: 5px;
+      z-index: 10000;
+    }
+    main{
+      padding-top: 140px;
+      padding-left: 20px;
+    }
+    .navbar a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 22px;
+    }
+    .navbar a:hover {
+      background-color: #3e3e3e;
+    }
+    
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 180px;
+      max-width: fit-content;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      transition: 0.3s ease-in-out;
+      z-index: 1000;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      display: block;
+      font-size: 15px;
+    }
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+    /* Use :focus-within for better accessibility */
+    .dropdown:focus-within .dropdown-content,
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+      .navbar {
+          flex-direction: column;
+          align-items: flex-start;
+      }
+      .dropdown-content {
+          position: static;
+          box-shadow: none;
+          display: none;
+      }
+      .dropdown:focus-within .dropdown-content,
+      .dropdown:hover .dropdown-content {
+          display: block;
+      }
+    }
+    
+    .divfooter{
+      padding-top: 10px;
+      background-color: #788a66;
+      color: #ffffff;
+      width: 100%; /* Ensures full-width background */
+      display: flex;
+      /* position: fixed; */
+      padding-left: 10px;
+      justify-content: flex-end; /* Aligns content (table) to the right #D76C82*/
+      padding-bottom: 20px;
+      bottom: 0px;
+    }
+    .footer-content{
+      width: 40%;
+      padding-top: 20px;
+      color: #FCE8E0;
+      /* text-align: justify; */
+      padding-right: 40px;
+    }
+    table{
+      margin-left: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: transparent;
+      text-align: left;
+    }
+    td{
+      /* padding-left: 30px; */
+      padding-right: 120px;
+      padding-bottom: 10px;
+    }
+    
+    
+    /* footer link */
+    .a1{
+      text-decoration: none;
+      color: white;
+    }
+    body {
+      background-color: #FFF6DA;
+    }
+    
+    .calorie-info ul {
+      padding-left: 1rem;
+      list-style: none;
+    }
+    
+    .calorie-info li {
+      margin-bottom: 0.5rem;
+    }
+
+    .Factual {
+      max-width: 700px;
+      margin: 2rem ;
+      padding: 2rem;
+      background: #fff3e0;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width:40%;
+      display: inline;
+      float: left;
+    }
+    
+    
+    
+    .factList {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .fact {
+      margin-bottom: 1rem;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    .mood-boxes {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .mood-box {
+      background-color: #ffffff;
+      border-left: 6px solid #FF8C42;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    
+    @media (min-width: 600px) {
+      .mood-boxes {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .mood-box {
+        flex: 1;
+      }
+    }
+    
+    .water-tracker {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 1rem;
+      }
+    
+      .glass {
+        width: 50px;
+        height: 70px;
+        border: 2px solid #00BFFF;
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+      }
+    
+      .glass input {
+        appearance: none;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+      }
+    
+      .glass input:checked {
+        background-color: #00BFFF;
+      }
+    
+      .glass input:checked + span {
+        color: white;
+      }
+    
+      .glass span {
+        z-index: 1;
+        color: #333;
+      }
+      @media (min-width: 600px) {
+        .mood-boxes {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .mood-box {
+          flex: 1;
+        }
+      }
+    
+    
+  </style>
+  
+</head>
+<body>
+  <!-- <header>
+    <h1>Fun Food Facts</h1>
+    <p>Some surprising and tasty facts to make your day!</p>
+  </header> -->
+
+  <header>
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <!-- Duplicate for seamless effect -->
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+            <span>Stay Healthy!!! Stay Fit!!!</span>
+        </div>
+    </div>
+    
+    <div class="navbar">
+        <img src="logobb.png" style="max-width: 10%;">
+        <a href="homepage.html">Home</a>
+        <div class="dropdown" tabindex="0">
+          <a href="meal.html">Meals </a>
+          <div class="dropdown-content">
+              <a href="meal.html">Vegetarian</a>
+              <a href="meal.html#nonveg">Non Vegetarian</a>
+          </div>
+        </div>
+        <div class="dropdown" tabindex="0">
+            <a href="#">Calculator</a>
+            <div class="dropdown-content">
+                <a href="bmi_cal.html">BMI Calculator</a>
+                <a href="calorie_cal.html">Calorie Calculator</a>
+                <!-- <a href="fiction.html#horror">Dinner</a> -->
+            </div>
+        </div>
+        <a href="funfact.html">Fun Facts</a>
+        <a href="contact.html">Contact</a>
+        <!-- <img id="insta" src="food1.png" style="max-width:7%;"> -->
+        
+    </div>
+</header>
+<main>
+  <div class="Factual">
+    <h2 class="h2fact">Did you know?</h2>
+    <ul class="factList">
+      <li class="fact">🥕 Carrots were originally purple, not orange.</li>
+      <li class="fact">🍌 Bananas are technically berries, but strawberries are not!</li>
+      <li class="fact">🍯 Honey never spoils — 3000-year-old honey is still edible.</li>
+      <li class="fact">🧄 Garlic was once used as currency in ancient Egypt.</li>
+      <li class="fact">🍅 Tomatoes were once considered poisonous in Europe.</li>
+      <li class="fact">🥦 Broccoli contains more protein per calorie than steak.</li>
+      <li class="fact">🍫 Dark chocolate has antioxidants that are good for your heart.</li>
+      <li class="fact">🥚 Eggs contain every vitamin except Vitamin C.</li>
+      <li class="fact">🌽 Corn is grown on every continent except Antarctica.</li>
+      <li class="fact">🍍 Pineapples take about two years to grow from seed to fruit.</li>
+    </ul>
+
+  </div>
+
+
+  <div class="Factual">
+  <h2 class="h2fact">Hydration Tracker</h2>
+    <p>Tick off your glasses of water for today:</p>
+    <div class="water-tracker">
+      <label class="glass"><input type="checkbox"><span>1</span></label>
+      <label class="glass"><input type="checkbox"><span>2</span></label>
+      <label class="glass"><input type="checkbox"><span>3</span></label>
+      <label class="glass"><input type="checkbox"><span>4</span></label>
+      <label class="glass"><input type="checkbox"><span>5</span></label>
+      <label class="glass"><input type="checkbox"><span>6</span></label>
+      <label class="glass"><input type="checkbox"><span>7</span></label>
+      <label class="glass"><input type="checkbox"><span>8</span></label>
+    </div>
+  </div>
+
+  <div class="Factual">
+    <h2 class="h2fact">Food Mood Inspiration</h2>
+    <div class="mood-boxes">
+      <div class="mood-box">😞 Feeling low? → Try bananas 🍌</div>
+      <div class="mood-box">😴 Feeling tired? → Try almonds 🥜</div>
+      <div class="mood-box">🤧 Feeling cold? → Try ginger tea 🍵</div>
+    </div>
+  </div>
+
+  <div class="Factual">
+    <div class="calorie-info">
+      <h2>🍽️ Daily Calorie Guide</h2><br>
+      <p>✅ <strong>Target:</strong> 1800-2200 kcal</p><br>
+      <ul>
+        <li>🥣 <strong>Breakfast:</strong> ~350 kcal</li>
+        <li>🍛 <strong>Lunch:</strong> ~600 kcal</li>
+        <li>🍽 <strong>Dinner:</strong> ~600 kcal</li>
+
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+  
+  <footer>
+    <div class="divfooter" >
+  
+      <div class="footer-content">
+          <p><strong>Balance Bite</strong> is your all-in-one diet planning companion, designed to make healthy eating simple, personalized, and stress-free. Whether you're chasing fitness goals or just trying to feel better every day, we've got your back with smart meal suggestions, easy tracking, and balanced nutrition tailored just for you. 🌱💚</p>
+          <br><p>© 2025 Balance Biete – Eat well. Live well. Stay balanced.</p>
+      </div>
+      <table align="right">
+          <tr>
+              <td><b>Brand Story</b></td>
+              <td><a class="a1" href="login.html"><b>Login</b></a></th>
+              <td><b>Policies</b></td>
+          </tr>
+          <tr>
+              <td><a class="a1" href="about_us.html">About us</a></td>
+              <td><a class="a1" href="meal.html">Meals </a></td>
+              <td>Privacy Policy</td>
+          </tr>
+          <tr>
+              <td><a class="a1" href="contact.html">Contact</a></td>
+              <td>Track Your Diet</td>
+              <td>T&C</td>
+          </tr>
+          <tr>
+              <td>Blogs</td>
+              <td></td>
+              <td></td>
+          </tr>
+          
+      </table>
+      <br>
+  </div>
+
+  </footer>
+</body>
+</html>

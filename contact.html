@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="dietmeal.css">
+    <style>
+        .contact_us{
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+        .contact-info, .contact-form {
+            flex: 1;
+        }
+
+        h2 {
+        margin-top: 0;
+        }
+
+        .info-item {
+        margin-bottom: 15px;
+        }
+
+        input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        }
+
+        button:hover {
+        background-color: #324138;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <!-- Duplicate for seamless effect -->
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+                <span>Stay Healthy!!! Stay Fit!!!</span>
+            </div>
+        </div>
+        
+        <div class="navbar">
+            <img src="logobb.png" style="max-width: 10%;">
+            <a href="homepage.html">Home</a>
+            <div class="dropdown" tabindex="0">
+                <a href="meal.html">Meals </a>
+            <div class="dropdown-content">
+                <a href="meal.html">Vegetarian</a>
+                <a href="meal.html#nonveg">Non Vegetarian</a>
+            </div>
+            </div>
+            <div class="dropdown" tabindex="0">
+                <a href="#">Calculator</a>
+                <div class="dropdown-content">
+                    <a href="bmi_cal.html">BMI Calculator</a>
+                    <a href="calorie_cal.html">Calorie Calculator</a>
+                    <!-- <a href="fiction.html#horror">Dinner</a> -->
+                </div>
+            </div>
+            <a href="funfact.html">Fun Facts</a>
+            <a href="#">Contact</a>
+            <!-- <img id="insta" src="food1.png" style="max-width:7%;"> -->
+            
+        </div>
+    </header>
+    
+    <main>
+        <div class="contact_us">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <br>
+                <div class="info-item">
+                  <strong>Email:</strong>
+                  balancebite@gmail.com
+                </div>
+                <div class="info-item">
+                  <strong>Phone:</strong>
+                  +91 5698741XXX
+                </div>
+                <div class="info-item">
+                  <strong>Address:</strong>
+                  56,Nav-nidhi complex,Rajputana Road,Andheri,Mumbai
+                </div>
+                <div class="info-item">
+                  <strong>Follow us:</strong>
+                  <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required>
+            
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required>
+            
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="6" required></textarea>
+            
+                  <button type="submit">Send</button>
+                </form>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="divfooter" >
+  
+            <div class="footer-content">
+                <p><strong>Balance Bite</strong> is your all-in-one diet planning companion, designed to make healthy eating simple, personalized, and stress-free. Whether you're chasing fitness goals or just trying to feel better every day, we've got your back with smart meal suggestions, easy tracking, and balanced nutrition tailored just for you. 🌱💚</p>
+                <br><p>© 2025 Balance Biete – Eat well. Live well. Stay balanced.</p>
+            </div>
+            <table align="right">
+                <tr>
+                    <td><b>Brand Story</b></td>
+                    <td><a class="a1" href="login.html"><b>Login</b></a></th>
+                    <td><b>Policies</b></td>
+                </tr>
+                <tr>
+                    <td><a class="a1" href="about_us.html">About us</a></td>
+                    <td><a class="a1" href="meal.html">Meals </a></td>
+                    <td>Privacy Policy</td>
+                </tr>
+                <tr>
+                    <td><a class="a1" href="contact.html">Contact</a></td>
+                    <td>Track Your Diet</td>
+                    <td>T&C</td>
+                </tr>
+                <tr>
+                    <td>Blogs</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+            </table>
+            <br>
+        </div>
+    </footer>
+</body>
+</html>

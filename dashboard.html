@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="dietmeal.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+    .sidebar {
+      height: 100vh;
+      width: 240px;
+      background-color: #af5757;
+      display: flex;
+      flex-direction: column;
+      padding-top: 20px;
+      position: fixed;
+    }
+  
+    .sidebar a,
+    .dropdown {
+      padding: 15px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: rgb(255, 253, 253);
+      display: block;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .sidebar a:hover{
+      background-color: #f6d1d1;
+    }
+    .dropdown:hover {
+      background-color: #f6d1d1;
+    }
+  
+    .dropdown-container {
+      display: none;
+      background-color: #f0e8e8;
+      flex-direction: column;
+    }
+  
+    .dropdown:hover .dropdown-container {
+      display: flex;
+    }
+  
+    .dropdown-container a {
+      font-size: 16px;
+      color: #0f0e0e;
+      padding: 12px 30px;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+  
+    .dropdown-container a:hover {
+      background-color: #fdb2b2;
+    }
+    #avatar{
+      align-self: center;
+      width:50%;
+      border-radius: 50%;
+      padding:2%;
+      margin-top:2%;
+    }
+    .main-content {
+      margin-left: 240px;
+      margin-top: 20px;
+      padding: 20px;
+    }
+    #p_dash{
+    text-align: center;
+    font-size: 30px;
+    color: #74bf76;
+    font-weight: bold;
+    font-family: Lucida Fax;
+  }
+  .personal_info{
+    background-color: ivory;
+    border-radius: 10px;
+    margin: 2rem ;
+    width:90%;
+    padding:2%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .task_completion{
+    max-width: 600px;
+    margin: 2rem ;
+    margin-top:0.5%;
+    padding: 2rem;
+    background:ivory;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width:80%;
+    display: inline;
+    float: left;
+    border-left: 6px solid #FF8C42;
+}
+
+input[type="checkbox"]{
+  transform: scale(1.5);
+  margin:5%;
+  accent-color: #4CAF50;
+}
+.calender{
+  display:flex;
+  float:left;
+  margin-left:5%;
+  padding-top:5%;
+}
+h3{
+  font-size: 25px;
+  color: #FF8C42;
+  text-align: center;
+}
+h3{
+  font-size: 25px;
+  color: #FF8C42;
+  text-align: center;
+}
+.meals_dashboard{
+    margin: 2rem ;
+    margin-top:0.5%;
+    border-radius: 10px;
+    width:95%; 
+    
+}
+.meals_today_display{
+    width:95%;
+    padding:2%;
+    margin-right:2%;
+    border-radius: 10px;
+    background-color: ivory;
+    border-left:5px solid #FF8C42;
+}
+.meals_today_recipe{
+  display: flex;
+}
+.meals_today{
+    width:30%;
+    padding:1%;
+    margin-right:2%;
+    margin-top:1.5%;
+    border-radius: 10px;
+    background-color: ivory;
+    border-left:5px solid #FF8C42;
+    float: left;
+}
+#meal_list{
+    padding-left:2%;
+    font-size: 120%;
+
+}
+#meal_list::marker{
+    color: #FF8C42;
+}
+.recipe_meal{
+    border-radius: 5px;
+    font-size:90%;
+}
+</style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <img id="avatar" src="" alt="avatar">
+    <h2  id="greeting" style="color:white; text-align: center; margin-bottom: 5%; font-family: Comic Sans MS;"></h2>
+    
+
+    <div class="dropdown">
+      📅 Meals 
+      <div class="dropdown-container">
+        <a href="meal.html">Vegetarian</a>
+        <a href="meal.html#nonveg">Non Vegetarian</a>
+    </div>
+    </div>
+
+    <div class="dropdown">
+      🧮 Calculator 
+      <div class="dropdown-container">
+        <a href="bmi_cal.html">BMI Calculator</a>
+        <a href="calorie_cal.html">Calorie Calculator</a>
+      </div>
+    </div>
+
+    <a href="funfact.html">🤓 Fun Facts</a>
+    <a href="contact.html">📨 Contact</a>
+    <a href="homepage.html">↘️ Sign-out</a>
+  </div>
+
+  
+  
+  <div class="marquee-container">
+    <div class="marquee-content">
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <!-- Duplicate for seamless effect -->
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+        <span>Stay Healthy!!! Stay Fit!!!</span>
+    </div>
+</div>
+
+<div class="main-content">
+  
+  
+  <p id="p_dash"><i>We congratulate you on taking the first few steps <br> toward a healthier diet!!!</i></p>
+
+  <!-- <h2>Dashboard</h2> -->
+  <div class="personal_info">
+      <p id="name"></p><br>
+      <p id="gender"></p><br>
+      <p id="age"></p>
+  </div>
+  <script>
+    const name=localStorage.getItem("name");
+    const gender=localStorage.getItem("gender");
+    const age=localStorage.getItem("age");
+
+    document.getElementById("name").textContent="Name:"+name;
+    document.getElementById("gender").textContent="Gender:"+gender;
+    document.getElementById("age").textContent="Age:"+age;
+    document.getElementById("greeting").textContent="Hello "+name+" !!";
+
+    const avatarImg = document.getElementById("avatar");
+
+    if (gender.toLowerCase() === "female") {   //.toLowerCase()- a method that converts everything to lowercase
+      avatarImg.src = "https://static.vecteezy.com/system/resources/thumbnails/004/899/680/small_2x/beautiful-blonde-woman-with-makeup-avatar-for-a-beauty-salon-illustration-in-the-cartoon-style-vector.jpg";
+    } 
+    else {
+      avatarImg.src = "https://static.vecteezy.com/system/resources/previews/024/183/525/non_2x/avatar-of-a-man-portrait-of-a-young-guy-illustration-of-male-character-in-modern-color-style-vector.jpg";
+    }
+
+  </script>
+  <div style="clear: both;"></div>
+  <div class="meals_dashboard">
+    <div class="meals_today_display">
+      <h2 style="color:#FF8C42; text-align: center;">Your Meal for Today</h2>
+      <img src="food_meal.png" alt="fruits" align="right" width="30%" height="150px">
+      <br>
+      <ul>
+        <li id="meal_list">Oatmeal with Fruits & Nuts</li>
+        <li id="meal_list">Veggie Wrap</li>
+        <li id="meal_list">Lentil Soup</li>
+        <li id="meal_list">Handful of mixed nuts</li>
+      </ul>
+      
+    </div>
+    <div class="meals_today_recipe">
+
+      <div class="meals_today">
+        <h2 style="color:#FF8C42; text-align: center;">Oatmeal with Fruits & Nuts</h2><br>
+        <center>
+          <img style="border-radius:50%; width:50%;" src="https://d1c8xu194km6ge.cloudfront.net/assets/326360/Fruit_and_Nut_Oatmeal_HD-1_HD1280.jpg" alt="oatmeal">
+        </center>
+        <button class="recipe_meal" onclick="toggleRecipe(this)">See Recipe</button>
+        <p style="display: inline-block; margin-left:18%;" align="right">🔥 552 cal</p>
+        <p style="margin-right:14%;" align="right">🕒 5 min</p>
+        <div class="recipe">
+          Prepare oats in a small saucepan.Serve topped with yogurt, apple and walnuts.
+        </div>
+      </div>
+
+      <div class="meals_today">
+        <h2 style="color:#FF8C42; text-align: center;">Veggie Wrap</h2><br><br>
+        <center>
+          <img style="border-radius:50%; width:50%;" src="https://www.plantperks.com/wp-content/uploads/2020/02/IMG_0198-Edit.jpg" alt="veggie_wrap">
+        </center>
+        <button class="recipe_meal" onclick="toggleRecipe(this)">See Recipe</button>
+        <p style="display: inline-block; margin-left:18%;" align="right">🔥 394 cal</p>
+        <p style="margin-right:14%;" align="right">🕒 15 min</p>
+        <div class="recipe">
+          On chapaati,place the lettuce and then the spread the vegies,along with cheese,yougurt or mayo with garlic mustard, pepper and lemon juice, on one side. Roll it, and it is ready to eat.
+        </div>
+      </div>
+
+      <div class="meals_today">
+        <h2 style="color:#FF8C42; text-align: center;">Lentil Soup</h2><br>
+        <center>
+          <img style="border-radius:50%; width:50%;" height="133px" src="https://peasandcrayons.com/wp-content/uploads/2019/10/italian-lentil-soup-recipe-3.jpg" alt="lentil soup">
+        </center>
+        <button class="recipe_meal" onclick="toggleRecipe(this)">See Recipe</button>
+        <p style="display: inline-block; margin-left:18%;" align="right">🔥 139 cal</p>
+        <p style="margin-right:14%;" align="right">🕒 40 min</p>
+        <div class="recipe">
+          Bring lentils, onion, tomato paste, garlic, and cumin to a boil in a large saucepan over medium heat. Reduce the heat, cover, and simmer until lentils are soft, 30 to 45 minutes.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="clear: both;"></div>
+
+  <script>
+    function toggleRecipe(button) {
+      const recipe = button.nextElementSibling;
+      const isVisible = recipe.style.display === 'block';
+      recipe.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'Show Recipe' : 'Hide Recipe';
+    }
+  </script>
+
+  <div class="task_completion">
+    <h2>Tasks yet to be completed</h2><br>
+    <div class="task">
+      <form>
+      <input type="checkbox" name="water_level">Drink 8-9 Glasses of water.<br>
+      <input type="checkbox" name="workout">Daily workout.<br>
+      <input type="checkbox" name="vegetable">Include at least 1 serving of vegetables in each meal.<br>
+      <input type="checkbox" name="calorie_track">Track your calories or food intake.<br>
+      <input type="checkbox" name="timely_eating">Eat on time - no skipping meals.<br>
+      <input type="checkbox" name="sleep">Get 7-8 hours of sleep.<br>
+      </form>
+    </div>
+  </div>
+  <!--img src="calender.png" alt="calender" width="30%" height="30%"-->
+  <img src="time_food.png" alt="best_time" width="40%" height="40%">  
+</div>
+    
+    <!-- <div class="slider-container">
+        <h2>Adjust Your Value</h2>
+        <input type="range" min="0" max="100" value="50" id="slider">
+        <p class="slider-value">Value: <span id="sliderValue">50</span></p>
+      </div> --> 
+    
+
+</div>
+
+</body>
+</html>
